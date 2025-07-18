@@ -61,3 +61,8 @@ org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-23
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-232]
 2025-07-18 17:59:03.319122+07:00 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-232]
+2025-07-18 19:20:34.866470+07:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-232]
+2025-07-18 19:23:00.167923+07:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM PRODUCT PRODUCTS [*]PENJUALAN"; SQL statement:
+SELECT * FROM PRODUCT PRODUCTS PENJUALAN [42000-232]

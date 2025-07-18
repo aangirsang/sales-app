@@ -1,20 +1,29 @@
 package com.example.salesapp.controller
 
+import com.example.salesapp.model.Penjualan
 import com.example.salesapp.model.Product
+import com.example.salesapp.service.PenjualanService
 import com.example.salesapp.service.ProductService
 import javafx.beans.property.ReadOnlyObjectWrapper
 import javafx.beans.property.ReadOnlyStringWrapper
 import javafx.collections.FXCollections
 import javafx.fxml.FXML
+import javafx.fxml.FXMLLoader
 import javafx.fxml.Initializable
+import javafx.scene.Parent
+import javafx.scene.Scene
 import javafx.scene.control.*
 import javafx.scene.input.MouseEvent
+import javafx.stage.Modality
+import javafx.stage.Stage
 import org.springframework.stereotype.Component
 import java.net.URL
 import java.util.*
 
 @Component
-class GUIController(private val productService: ProductService) : Initializable {
+class GUIController(
+    private val productService: ProductService, private var penjualanService: PenjualanService
+) : Initializable {
 
     @FXML private lateinit var productTable: TableView<Product>
     @FXML private lateinit var nameField: TextField
@@ -45,6 +54,7 @@ class GUIController(private val productService: ProductService) : Initializable 
         hargaColumn.setCellValueFactory { ReadOnlyObjectWrapper(it.value.price) }
         stokColumn.setCellValueFactory { ReadOnlyObjectWrapper(it.value.stock) }
         loadProducts()
+//        penjualanService.getAllPenjualan()
     }
 
     @FXML
@@ -90,6 +100,9 @@ class GUIController(private val productService: ProductService) : Initializable 
         }
     }
 
+    fun onTambahClicked() {
+        openPenjualan()
+    }
             @FXML
     fun handleTableClick(event: MouseEvent){
         if (event.clickCount == 1) {
@@ -112,6 +125,21 @@ class GUIController(private val productService: ProductService) : Initializable 
         priceField.clear()
         stockField.clear()
         productTable.selectionModel.clearSelection()
+    }
+
+    private fun openPenjualan(data: Any? = null) {
+        val loader = FXMLLoader(javaClass.getResource("/view/penjualan.fxml"))
+
+        val controller = loader.getController<PenjualanController>()
+        loader.setController(controller)
+        val root: Parent = loader.load()
+        //controller.setData(data) // opsional, untuk edit data
+
+        val stage = Stage()
+        stage.title = "Form Penjualan"
+        stage.scene = Scene(root)
+        stage.initModality(Modality.APPLICATION_MODAL)
+        stage.showAndWait()
     }
 
 }

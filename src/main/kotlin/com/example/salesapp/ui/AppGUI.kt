@@ -1,13 +1,7 @@
 package com.example.salesapp.ui
 
 import com.example.salesapp.SalesAppApplication
-import com.example.salesapp.controller.GUIController
-import com.example.salesapp.controller.ProductController
-import com.example.salesapp.service.ProductService
-import com.example.salesapp.service.impl.ProductServiceImpl
 import javafx.application.Application
-import javafx.fxml.FXMLLoader
-import javafx.scene.Parent
 import javafx.scene.Scene
 import javafx.stage.Stage
 import org.springframework.boot.SpringApplication

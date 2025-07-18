@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="929.0"
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+
+>
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" />
+      <HBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="929.0" spacing="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="onSimpanClicked" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Simpan" />
+            <DatePicker fx:id="tglPenjualan" prefHeight="25.0" prefWidth="272.0" />
+            <TextField prefHeight="25.0" prefWidth="221.0" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <HBox layoutY="66.0" prefHeight="100.0" prefWidth="929.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox prefHeight="100.0" prefWidth="373.0" />
+            <VBox prefHeight="100.0" prefWidth="373.0" />
+         </children>
+      </HBox>
+      <VBox layoutX="24.0" layoutY="215.0" prefHeight="325.0" prefWidth="909.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <children>
+            <TableView fx:id="tblPenjualan" prefHeight="377.0" prefWidth="909.0">
+               <columns>
+                  <TableColumn fx:id="idcolumn" visible="false" />
+                  <TableColumn fx:id="datecolumn" prefWidth="397.0" text="Tanggal Penjualan" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
