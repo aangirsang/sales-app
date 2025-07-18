@@ -2,7 +2,6 @@ package com.example.salesapp.controller
 
 import com.example.salesapp.model.Product
 import com.example.salesapp.service.ProductService
-//import org.springframework.web.bind.annotation.*
 
 //@RestController
 //@RequestMapping("/api/products")

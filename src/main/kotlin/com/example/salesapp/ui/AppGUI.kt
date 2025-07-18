@@ -29,13 +29,6 @@ class AppGUI : Application() {
         val load = context.getBean(SpringFXMLLoader::class.java)
         val root = load.load("/view/main.fxml")
 
-//        val loader = FXMLLoader(javaClass.getResource("/view/gui.fxml"))
-//        val root = loader.load<Parent>()
-//
-//        val controller = loader.getController<GUIController>()
-        //controller.productService = ProductServiceImpl()
-
-
         val scene = Scene(root)
         primaryStage.scene = scene
         primaryStage.title = "Sales App"
