@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component
 import java.net.URL
 import java.util.*
 
-
 @Component
 class GUIController(private val productService: ProductService) : Initializable {
 
