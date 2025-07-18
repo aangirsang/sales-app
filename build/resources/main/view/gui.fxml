@@ -8,7 +8,12 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane prefHeight="310.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.salesapp.controller.GUIController">
+<?import javafx.scene.control.Label?>
+<AnchorPane
+        prefHeight="310.0" prefWidth="600.0"
+        xmlns="http://javafx.com/javafx/24.0.1"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.example.salesapp.controller.GUIController">
    <children>
       <VBox prefHeight="274.0" prefWidth="600.0">
          <children>
@@ -21,6 +26,7 @@
             <TextField fx:id="priceField" promptText="Price" />
             <TextField fx:id="stockField" prefHeight="25.0" prefWidth="178.0" promptText="Stock" />
             <Button onAction="#handleSave" text="Save" />
+            <Label fx:id="labelWelcome" layoutX="20" layoutY="20" text="Loading..." />
          </children>
       </HBox>
    </children>

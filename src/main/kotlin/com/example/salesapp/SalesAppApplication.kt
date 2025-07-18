@@ -5,7 +5,12 @@ import javafx.application.Application
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
-@SpringBootApplication
+@SpringBootApplication(
+    exclude = [
+        org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactoryAutoConfiguration::class,
+        org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration::class
+    ]
+)
 open class SalesAppApplication
 
 fun main(args: Array<String>) {
