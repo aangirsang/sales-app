@@ -28,7 +28,16 @@ class GUIController(private val productService: ProductService) : Initializable 
     @FXML
     private lateinit var labelWelcome: Label
 
+
     override fun initialize(location: URL?, resources: ResourceBundle?) {
+        hargaColumn.setCellFactory {
+            object : TableCell<Product, Double>() {
+                override fun updateItem(item: Double?, empty: Boolean) {
+                    super.updateItem(item, empty)
+                    text = if (empty || item == null) "" else "Rp %,d".format(item.toInt())
+                }
+            }
+        }
         namecolumn.setCellValueFactory { ReadOnlyStringWrapper(it.value.name) }
         hargaColumn.setCellValueFactory { ReadOnlyObjectWrapper(it.value.price) }
         stokColumn.setCellValueFactory { ReadOnlyObjectWrapper(it.value.stock) }

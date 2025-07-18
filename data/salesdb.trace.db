@@ -41,3 +41,5 @@ Caused by: org.h2.mvstore.MVStoreException: The file is locked: D:/Andri/Belajar
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-232]
 2025-07-18 14:59:56.510813+07:00 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-232]
+2025-07-18 15:12:03.192242+07:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-232]
